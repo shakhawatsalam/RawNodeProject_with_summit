@@ -34,15 +34,23 @@ app.handleReqRes = (req, res) => {
     const hadersObject = req.headers;
 
     const decoder = new StringDecoder('utf-8');
+    let realData = '';
     req.on('data', (buffer) => {
+        realData += decoder.write(buffer);
+    });
 
+    req.on('end', () => {
+        realData += decoder.end();
+        console.log(realData);
+        // response handle
+        res.end("hello world");
     });
 
 
 
-    console.log(hadersObject.title);
 
-    res.end("hello world")
+
+
 };
 
 // start the server 
