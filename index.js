@@ -3,12 +3,17 @@
 const http = require('http');
 const { handleReqRes } = require('./helpers/handleReqRes.js');
 const environments = require('./helpers/environments');
+const data = require('./lib/data');
 
 // app object - modulescaffolding
 const app = {};
 
 
-
+// testing file system
+// @todo: Pore muche dibo
+data.update('test', 'newFile',{'name': 'England', 'language': 'English'}, (err) => {
+    console.log(err);
+});
 
 //create server 
 app.createServer = () => {
