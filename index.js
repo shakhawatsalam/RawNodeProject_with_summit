@@ -11,7 +11,7 @@ const app = {};
 
 // testing file system
 // @todo: Pore muche dibo
-data.update('test', 'newFile',{'name': 'England', 'language': 'English'}, (err) => {
+data.delete('test', 'newFile', (err) => {
     console.log(err);
 });
 
