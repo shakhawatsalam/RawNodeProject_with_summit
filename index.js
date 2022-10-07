@@ -11,9 +11,9 @@ const app = {};
 
 // testing file system
 // @todo: Pore muche dibo
-data.delete('test', 'newFile', (err) => {
-    console.log(err);
-});
+// data.delete('test', 'newFile', (err) => {
+//     console.log(err);
+// });
 
 //create server 
 app.createServer = () => {
